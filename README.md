@@ -46,7 +46,7 @@ Before running the script, ensure you have:
 
 1. **Clone or Download** this repository:
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/dksmithcybertog/ActiveDirectory-UserAccount-Audit.git
 
 ```
 
