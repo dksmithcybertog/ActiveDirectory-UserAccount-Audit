@@ -54,7 +54,7 @@ git clone https://github.com/dksmithcybertog/ActiveDirectory-UserAccount-Audit.g
 2. **Open PowerShell** as an Administrator (or as a domain user with AD read privileges).
 3. **Navigate to the directory** and run the script:
 ```powershell
-.\AD-UserAudit.ps1
+.\AD-Account-Audit-toCSV.ps1
 
 ```
 
