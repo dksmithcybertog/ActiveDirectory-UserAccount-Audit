@@ -62,8 +62,3 @@ git clone https://github.com/dksmithcybertog/ActiveDirectory-UserAccount-Audit.g
 4. **Retrieve your results** from `C:\AD-userAccount-Audit.csv`.
 
 ---
-
-
-## License
-
-This project is licensed under the [MIT License](https://www.google.com/search?q=LICENSE).
