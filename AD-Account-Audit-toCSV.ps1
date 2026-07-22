@@ -1,3 +1,7 @@
+Write-Host -BackgroundColor Blue -ForegroundColor White "Performing Active Directory Audit.... Please Wait!!" -NoNewline
+Start-Sleep -Seconds 5
+Write-Host `n
+
 # 1. Fetch all Domain Admins upfront for fast lookup
 $domainAdmins = Get-ADGroupMember -Identity "Domain Admins" -Recursive | Select-Object -ExpandProperty SamAccountName
 
@@ -21,3 +25,7 @@ Get-ADUser -Filter * -Properties Created, LastLogonDate | Select-Object Name,
     @{Name = 'OU'; Expression = { ($_.DistinguishedName -split '(?<!\\),', 2)[1] }},
     @{Name = 'IsDomainAdmin'; Expression = { $_.SamAccountName -in $domainAdmins }} |
 Export-Csv -Path "C:\AD-userAccount-Audit.csv" -NoTypeInformation
+
+Write-Host -BackgroundColor Green -ForegroundColor White "Active Directory Audit Complete! Check CSV File for Results." -NoNewline
+Start-Sleep -Seconds 5
+Write-Host `n
